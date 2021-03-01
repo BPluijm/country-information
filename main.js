@@ -16,7 +16,7 @@ function setQuery(e) {
 }
 
 async function getCountryData() {
-     searchBar.value = '';
+    searchBar.value = '';
     const errorMessage = document.getElementById('error-message');
     errorMessage.textContent = '';
     const previousSearchResult = document.getElementById('country');
@@ -54,35 +54,36 @@ async function getCountryData() {
 
         countryContainer.appendChild(country);
 
-    } catch(e) {
+    } catch (e) {
         console.error(e);
         errorMessage.textContent = `${query} bestaat niet. Probeer het opnieuw!`;
     }
+
 }
 
 function createLanguageDescription(languages) {
-    let output = 'They speak ';
+        let output = 'They speak ';
 
-    for (let i = 0; i < languages.length; i++) {
-       if (i === languages.length - 1) {
-           return output = output + " and " + languages[i];
+        for (let i = 0; i < languages.length; i++) {
+            if (i === languages.length - 1) {
+                return output = output + " and " + languages[i];
+            }
+            if (languages.length === 2 || i === languages.length - 2) {
+                output = output + languages[i];
+            } else {
+                output = output + languages[i] + ", ";
+            }
         }
-        if (languages.length === 2 || i === languages.length - 2) {
-            output = output + languages[i];
-        } else {
-            output = output + languages[i] + ", ";
-        }
-    }
 
-    return output;
+        return output;
 }
 
 function createCurrencyDescription(currencies) {
-    let output = 'and you can pay with ';
+        let output = 'and you can pay with ';
 
-    if (currencies.length === 2) {
-        return output + `${currencies[0]} and ${currencies[1]}'s`;
-    }
+        if (currencies.length === 2) {
+            return output + `${currencies[0]} and ${currencies[1]}'s`;
+        }
 
-    return output + `${currencies[0]}'s`;
+        return output + `${currencies[0]}'s`;
 }

@@ -8,13 +8,10 @@ h1 {
 
 #picture {
   max-height: 250px;
-  width: auto;
 }
 
-.volgende {
-  color: #4C834B;
-  text-align: center;
-  text-decoration: none;
+#error-message {
+  color: red;
 }
 
 #search-bar {
@@ -23,4 +20,18 @@ h1 {
 
 #search-button {
   text-align: center;
+}
+
+.volgende {
+  color: #4C834B;
+  text-align: center;
+  text-decoration: none;
+}
+
+#countries img {
+  width: 400px;
+}
+
+#countries h1 {
+  color: #566e5c;
 }
