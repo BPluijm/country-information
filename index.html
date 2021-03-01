@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Country Information App</title>
 </head>
 <body>
 
+<img id="picture" src="./assets/wereldbol.jpg" alt="wereldbol">
+
+    <h1>Let's search some country information</h1>
+        <input id="search-bar" type="text" />
+    <button id="search-button" type="button">
+    Search
+    </button>
+    <p id="error-message"></p>
+    <div id="countries"></div>
+
+    <button>
+        <a class="volgende" href= "index2.html">Volgende Pagina</a>
+    </button>
+
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
