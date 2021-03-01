@@ -6,22 +6,16 @@ h1 {
   font-size: 50px;
 }
 
-a {
-  text-underline: none;
-}
-
 #picture {
   max-height: 400px;
   width: auto;
 }
 
 .volgende {
-  color: black;
+  color: #4C834B;
   text-align: center;
-  text-underline-mode: none;
+  text-decoration: none;
 }
-
-
 
 #search-bar {
   text-align: center;
