@@ -28,10 +28,16 @@ h1 {
   text-decoration: none;
 }
 
+#countries p {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 16px;
+}
+
 #countries img {
-  width: 400px;
+  width: 200px;
 }
 
 #countries h1 {
   color: #566e5c;
 }
+

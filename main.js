@@ -45,7 +45,7 @@ async function getCountryData() {
         country.appendChild(population);
 
         const capital = document.createElement('p');
-        capital.textContent = `The capital is ${countryInfo.capital} and you can pay with ${createCurrencyDescription(countryInfo.currencies)}`;
+        capital.textContent = `The capital is ${countryInfo.capital} ${createCurrencyDescription(countryInfo.currencies)}`;
         country.appendChild(capital);
 
         const languages = document.createElement('p');
@@ -56,9 +56,8 @@ async function getCountryData() {
 
     } catch (e) {
         console.error(e);
-        errorMessage.textContent = `${query} bestaat niet. Probeer het opnieuw!`;
+        errorMessage.textContent = `Oops er ging iets mis, ${query} bestaat niet. Probeer het opnieuw!`;
     }
-
 }
 
 function createLanguageDescription(languages) {
@@ -66,12 +65,12 @@ function createLanguageDescription(languages) {
 
         for (let i = 0; i < languages.length; i++) {
             if (i === languages.length - 1) {
-                return output = output + " and " + languages[i];
+                return output = output + " and " + languages[i].name;
             }
             if (languages.length === 2 || i === languages.length - 2) {
-                output = output + languages[i];
+                output = output + languages[i].name;
             } else {
-                output = output + languages[i] + ", ";
+                output = output + languages[i].name + ", ";
             }
         }
 
@@ -81,9 +80,8 @@ function createLanguageDescription(languages) {
 function createCurrencyDescription(currencies) {
         let output = 'and you can pay with ';
 
-        if (currencies.length === 2) {
-            return output + `${currencies[0]} and ${currencies[1]}'s`;
+         if (currencies.length === 2) {
+            return output + `${currencies[0].name} and ${currencies[1].name}'s`;
         }
-
-        return output + `${currencies[0]}'s`;
+        return output + `${currencies[0].name}'s`;
 }
