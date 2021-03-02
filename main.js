@@ -61,20 +61,17 @@ async function getCountryData() {
 }
 
 function createLanguageDescription(languages) {
-        let output = 'They speak ';
-
-        for (let i = 0; i < languages.length; i++) {
+    let string = `They speak ${languages[0].name}`;
+    if (languages.length > 1) {
+        for (let i = 1; i < languages.length; i++) {
             if (i === languages.length - 1) {
-                return output = output + " and " + languages[i].name;
-            }
-            if (languages.length === 2 || i === languages.length - 2) {
-                output = output + languages[i].name;
+                string += ` and ${languages[i].name}`;
             } else {
-                output = output + languages[i].name + ", ";
+                string += `, ${languages[i].name}`;
             }
         }
-
-        return output;
+    }
+    return string;
 }
 
 function createCurrencyDescription(currencies) {
