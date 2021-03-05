@@ -45,21 +45,25 @@ h1 {
   align-items: center;
 }
 
+
 #countries p {
   font-family: "Roboto Light", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 #countries img {
   width: 60px;
   height: 40px;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: row;
+  text-align: left;
+
 }
 
 #countries h1 {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 30px;
   color: #566e5c;
 }
-
-.title {
-  display: flex;
-}
-

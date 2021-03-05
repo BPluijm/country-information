@@ -78,7 +78,7 @@ function createCurrencyDescription(currencies) {
         let output = 'and you can pay with ';
 
          if (currencies.length === 2) {
-            return output + `${currencies[0].name} and ${currencies[1].name}'s`;
+            return output + `${currencies[0].name} and ${currencies[1].name}'s.`;
         }
-        return output + `${currencies[0].name}'s`;
+        return output + `${currencies[0].name}'s.`;
 }
