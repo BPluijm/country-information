@@ -1,5 +1,9 @@
 body {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -12,6 +16,7 @@ h1 {
 
 #error-message {
   color: red;
+  margin: 2em;
 }
 
 #search-bar {
@@ -22,10 +27,22 @@ h1 {
   text-align: center;
 }
 
+.search {
+  display: flex;
+}
+
 .volgende {
   color: #4C834B;
   text-align: center;
   text-decoration: none;
+}
+
+#countries {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #countries p {
@@ -34,10 +51,15 @@ h1 {
 }
 
 #countries img {
-  width: 200px;
+  width: 60px;
+  height: 40px;
 }
 
 #countries h1 {
   color: #566e5c;
+}
+
+.title {
+  display: flex;
 }
 
