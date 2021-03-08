@@ -48,26 +48,25 @@ h1 {
     width: 20px;
     margin: 0 10px 0 0;
     display: inline-block;
-    column-count: 3;
 }
 
-.blue {
+.africa {
     color: #5575C1;
 }
 
-.green {
+.americas {
     color: #4C834B;
 }
 
-.red {
+.asia {
     color: #D24E5B;
 }
 
-.yellow {
+.europe {
     color: #FFD435;
 }
 
-.purple {
+.oceania {
     color: #A653BA;
 }
 
